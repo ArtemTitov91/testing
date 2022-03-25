@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+@import '../../styles/mixin.scss';
+
+.mainList{
+    margin: 19px 0 0 34px;
+}
+
+.mainList__title{
+    @include font($size: 14px, $weight: 700, $height: 16px, $align: left);
+    margin: $noneMargin;
+}
+
+.mainList__list{
+    padding: $nonePadding;
+    list-style: none;
+}

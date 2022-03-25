@@ -1,0 +1,8 @@
+@import "../../styles/variables.scss";
+@import '../../styles/mixin.scss';
+
+.app {
+    margin: 0;
+    @include flex($align: stretch);
+    @include wh($w: 665px, $h: 1028px);
+}

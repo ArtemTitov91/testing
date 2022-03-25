@@ -1,0 +1,88 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.modal {
+  @include wh($w: calc(665px - 150px), $h: 100%);
+  @include position($position: absolute, $t: 0px, $r:0 );
+  background-color: $mainColor;
+  visibility: visible;
+}
+
+.modal_close{
+    visibility: hidden;
+}
+
+.modal__header {
+  margin: 0 41px 0 36px;
+  position: relative;
+}
+
+.modal__title {
+  @include font($size: 14px, $weight: 700, $height: 16px, $align: left);
+  margin-top: 19px;
+}
+
+.modal__button {
+  @include position($t: 0px, $r: 0px);
+  @include wh($w: 116px, $h: 27px, $r: 5px);
+  border: none;
+  @include font($size: 12px, $weight: 400, $height: 14px);
+  color: $mainColor;
+  background-color: $buttonColor;
+  cursor: pointer;
+}
+
+.modal__form {
+  @include wh($w: 438px, $h: 560px, $r: 8px);
+  border: $borderLine;
+  margin: 16px 0 0 36px;
+  padding: 20px 6px 0px 12px;
+box-sizing: border-box;
+position: relative;
+}
+
+.modal__input-about{
+    @include flex($direction: column, $align: start);
+}
+
+.modal__input{
+    @include wh($w: 211px, $h: 22px, $r: 5px);
+    margin-bottom: 10px;
+}
+
+.modall__input_not-error{
+  border: $borderLine;
+}
+
+.modall__input_error{
+  border: $errorLine;
+}
+
+.modal__input-commit{
+    @include wh($w: 400px, $h: 55px, $r: 5px);
+}
+
+.modal__input-name{
+    @include font($size: 8px, $weight: 400, $height: 9px);
+}
+
+.modal__button-submit{
+    @include position($b: -35px, $r: 0px);
+    @include wh($w: 85px, $h: 24px, $r: 5px);
+    @include font($size: 8px, $weight: 400, $height: 9px);
+    background-color: #52CF4F;
+    color: white;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.modal__button-submit:disabled{
+  opacity: 0.5;
+}
+
+.modal__error{
+  color: red;
+  margin-bottom:10px;
+  @include font($size: 12px, $weight: 400, $height: 14px);
+}

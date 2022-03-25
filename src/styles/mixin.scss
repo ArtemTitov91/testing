@@ -1,0 +1,58 @@
+@mixin minwh($mw: auto, $mh: auto,) {
+    min-width: $mw;
+    min-height: $mh;
+}
+
+@mixin wh($w: 100%, $h: auto, $r: 0,) {
+  width: $w;
+  height: $h;
+
+  @if $r != 0 {
+    border-radius: $r;
+  }
+}
+
+@mixin flex($align: stretch, $justify: flex-start, $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin position($position: absolute, $t: auto, $l: auto, $b: auto, $r: auto) {
+  position: $position;
+  top: $t;
+  left: $l;
+  bottom: $b;
+  right: $r;
+}
+
+@mixin font(
+  $family: $fontFamily,
+  $size: 16px,
+  $style: normal,
+  $weight: 400,
+  $height: 16px,
+  $spacing: 0em,
+  $align: center,
+) {
+  font-family: $family;
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-align: $align;
+}
+
+@mixin forList ($listStyle: none, $padding: 0,){
+    list-style: $listStyle;
+    padding: $padding;
+}
+
+@mixin grid ($align: stretch, $justify: flex-start, $direction: row) {
+    display: grid;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+  }
